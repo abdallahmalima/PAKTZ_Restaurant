@@ -36,6 +36,7 @@ header nav {
   margin-top: 10px;
 }
 
+footer img,
 header nav .logo-wrapper img {
   width: 120px;
   height: 80px;
@@ -50,4 +51,28 @@ header nav .navItems {
 
 header nav .hamburger {
   display: none;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin-top: 10px;
+  bottom: 0;
+}
+
+footer .footer-wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+footer .creator {
+  font-size: 12px;
+  font-style: oblique;
+  margin-right: 300px;
 }
