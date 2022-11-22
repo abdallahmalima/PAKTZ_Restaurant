@@ -36,8 +36,7 @@ header nav {
   margin-top: 10px;
 }
 
-header nav .logo-wrapper img,
-footer img {
+header nav .logo-wrapper img {
   width: 120px;
   height: 80px;
 }
