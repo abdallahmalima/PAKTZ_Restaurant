@@ -148,6 +148,11 @@ main ul li .nameWrapper i:hover {
   color: red;
 }
 
+main ul li h4 {
+  color: #333;
+  align-self: flex-end;
+}
+
 main ul li .buttonWrapper {
   width: 95%;
   display: flex;
