@@ -19,10 +19,13 @@ const createItem = (obj, list) => {
   buttonWrapper.className = 'buttonWrapper';
   const nameWrapper = document.createElement('div');
   nameWrapper.className = 'nameWrapper';
+  const likesCounter = document.createElement('h4');
+  likesCounter.innerHTML = '5 likes';
   li.appendChild(image);
   nameWrapper.appendChild(name);
   nameWrapper.appendChild(like);
   li.appendChild(nameWrapper);
+  li.appendChild(likesCounter);
   buttonWrapper.appendChild(comments);
   buttonWrapper.appendChild(reservation);
   li.appendChild(buttonWrapper);
