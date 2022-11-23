@@ -47,7 +47,15 @@ header nav {
   margin-top: 10px;
 }
 
-footer img,
+main ul li img {
+  max-width: 100%;
+}
+
+footer img {
+  width: 120px;
+  height: 80px;
+}
+
 header nav .logo-wrapper img {
   width: 120px;
   height: 80px;
@@ -89,9 +97,9 @@ footer .creator {
   color: #333;
 }
 
-/*********************************\
+/*********************************  \
 |*           Main                *|
-\*********************************/
+\  *********************************/
 main {
   display: flex;
   width: 100%;
@@ -118,10 +126,6 @@ main ul li {
   gap: 20px;
 }
 
-main ul li img {
-  max-width: 100%;
-}
-
 main ul li .nameWrapper {
   width: 95%;
   display: flex;
@@ -129,14 +133,14 @@ main ul li .nameWrapper {
   align-items: center;
 }
 
-main ul li .nameWrapper h2{
+main ul li .nameWrapper h2 {
   color: #333;
 }
 
 main ul li .nameWrapper i {
   font-size: 25px;
   cursor: pointer;
-  color:#555;
+  color: #555;
 }
 
 main ul li .nameWrapper i:hover {
