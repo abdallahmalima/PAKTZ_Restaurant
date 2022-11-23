@@ -47,13 +47,13 @@ header nav {
   margin-top: 10px;
 }
 
-main ul li img {
-  max-width: 100%;
-}
-
 footer img {
   width: 120px;
   height: 80px;
+}
+
+main ul li img {
+  max-width: 100%;
 }
 
 header nav .logo-wrapper img {
