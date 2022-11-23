@@ -17,8 +17,19 @@ body {
 }
 
 a {
-  color: #000;
+  color: #333;
   text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+a:hover {
+  background-color: #555;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: linear 0.5s;
 }
 
 header {
@@ -36,7 +47,15 @@ header nav {
   margin-top: 10px;
 }
 
-footer img,
+footer img {
+  width: 120px;
+  height: 80px;
+}
+
+main ul li img {
+  max-width: 100%;
+}
+
 header nav .logo-wrapper img {
   width: 120px;
   height: 80px;
@@ -72,7 +91,89 @@ footer .footer-wrapper {
 }
 
 footer .creator {
-  font-size: 12px;
+  font-size: 0.9rem;
   font-style: oblique;
   margin-right: 300px;
+  color: #333;
+}
+
+/*********************************  \
+|*           Main                *|
+\  *********************************/
+main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+main ul {
+  list-style: none;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 40px;
+  row-gap: 30px;
+}
+
+main ul li {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+main ul li .nameWrapper {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main ul li .nameWrapper h2 {
+  color: #333;
+}
+
+main ul li .nameWrapper i {
+  font-size: 25px;
+  cursor: pointer;
+  color: #555;
+}
+
+main ul li .nameWrapper i:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+main ul li h4 {
+  color: #333;
+  align-self: flex-end;
+}
+
+main ul li .buttonWrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+main ul li .buttonWrapper button {
+  font-size: 1.3rem;
+  letter-spacing: 0.02rem;
+  padding: 8px 12px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 4px #000;
+}
+
+main ul li .buttonWrapper button:hover {
+  transform: scale(0.9);
+  box-shadow: none;
 }
