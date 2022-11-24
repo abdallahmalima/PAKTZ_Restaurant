@@ -51,11 +51,12 @@ let handleCommentBtnClick=(e)=>{
 }
 
 let addEventListerForCommentBtn=(commentBtn)=>{
+  
     commentBtn.addEventListener('click',handleCommentBtnClick);
 }
 
 let registerCommentBtnEventListener=()=>{
-const commentBtns=document.querySelectorAll('button');
+const commentBtns=document.querySelectorAll('.comments');
 commentBtns.forEach(addEventListerForCommentBtn);
 }
 
