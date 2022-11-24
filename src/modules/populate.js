@@ -1,4 +1,5 @@
 import createItem from './createItem.js';
+import countItem from './countItem.js';
 
 const mealList = document.querySelector('main');
 
@@ -10,6 +11,9 @@ const poplauteItem = (meals, likes) => {
     createItem(element, list, likes[index]);
   });
   mealList.appendChild(list);
+  const product = document.querySelector('.item2 a');
+  product.innerHTML = '';
+  product.innerHTML = `Product (${countItem(list)})`;
 };
 
 export default poplauteItem;
