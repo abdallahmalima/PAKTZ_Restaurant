@@ -52,6 +52,10 @@ footer img {
   height: 80px;
 }
 
+ul {
+  list-style-type: none;
+}
+
 main ul li img {
   max-width: 100%;
 }
@@ -108,6 +112,13 @@ main {
   margin: 40px 0;
 }
 
+.comment-formr button {
+  align-self: end;
+  width: 30%;
+  padding: 10px 0;
+  font-size: 17px;
+}
+
 main ul {
   list-style: none;
   width: 80%;
@@ -115,6 +126,11 @@ main ul {
   grid-template-columns: 50% 50%;
   column-gap: 40px;
   row-gap: 30px;
+}
+
+ul li {
+  border-bottom: 1px solid black;
+  padding-bottom: 7px;
 }
 
 main ul li {
@@ -203,7 +219,6 @@ main ul li .buttonWrapper button:hover {
   flex-direction: column;
   gap: 19px;
   overflow: auto;
-  
 }
 
 .comments-listsr {
@@ -217,12 +232,13 @@ main ul li .buttonWrapper button:hover {
 }
 
 .meal-detail-containerr {
- display: flex;
- flex-direction: column;
- align-items: center;
- font-size: 17px;
- gap: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 17px;
+  gap: 9px;
 }
+
 .meal-image {
   width: 90%;
 }
@@ -238,9 +254,8 @@ main ul li .buttonWrapper button:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap:15px;
+  gap: 15px;
   flex-direction: column;
-  
 }
 
 .comment-formr {
@@ -250,22 +265,14 @@ main ul li .buttonWrapper button:hover {
   width: 70%;
 }
 
-.comment-formr input,.comment-formr textarea {
+.comment-formr input,
+.comment-formr textarea {
   border-radius: 8px;
   font-weight: 400;
   padding-inline: 16px;
   padding-block: 9px;
   font-size: 17px;
   border: 3px solid #555;
-}
-
-ul {
-  list-style-type: none;
-}
-
-ul li{
-  border-bottom: 1px solid black;
-  padding-bottom: 7px;
 }
 
 .ingredients {
@@ -277,15 +284,6 @@ ul li{
   border: 3px solid #555;
   border-radius: 5px;
 }
-
-.comment-formr button{
-align-self: end;
-width: 30%;
-padding: 10px 0;
-font-size: 17px;
-
-}
-
 
 #pop-container {
   display: none;
@@ -300,7 +298,6 @@ font-size: 17px;
   background: rgba(85, 85, 85, 0.79);
   backdrop-filter: blur(7px);
   padding-block: 5%;
- 
 }
 
 .mealCommentsContainerr {
@@ -311,6 +308,7 @@ font-size: 17px;
   width: 100%;
   align-items: center;
 }
+
 .close-btn {
   display: flex;
   justify-content: flex-end;
@@ -328,7 +326,7 @@ font-size: 17px;
 
 .add-comment {
   background-color: #555;
-  color:#fff;
+  color: #fff;
   border: none;
   border-radius: 5px;
 }
@@ -338,16 +336,18 @@ font-size: 17px;
     display: none;
     padding-block: 3%;
   }
+
   .popup-wrapper {
-    width: 50%;  
+    width: 50%;
   }
+
   .meal-image {
     width: 50%;
   }
+
   .ingredient-pair {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
   }
 }
