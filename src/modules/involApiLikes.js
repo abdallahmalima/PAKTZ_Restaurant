@@ -17,7 +17,7 @@ const likesArr = async () => {
   const result = await fetch(invoURL)
     .then((response) => response.json());
   const likesArray = [];
-  for (let i = 2; i < result.length; i += 1) {
+  for (let i = 1; i < result.length; i += 1) {
     likesArray.push(result[i].likes);
   }
   return likesArray;
