@@ -1,4 +1,5 @@
 import createItem from './createItem.js';
+import registerCommentBtnEventListener from './showMealDetails.js';
 
 const mealList = document.querySelector('main');
 const poplauteItem = (meals) => {
@@ -8,6 +9,7 @@ const poplauteItem = (meals) => {
     createItem(element, list);
   });
   mealList.appendChild(list);
+  registerCommentBtnEventListener();
 };
 
 export default poplauteItem;
