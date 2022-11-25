@@ -39,6 +39,27 @@ This project hitting Two API one for getting list of meals and other for user in
 
 - [Live Demo Link](https://abdallahmalima.github.io/PAKTZ_Restaurant/dist/)
 
+<!-- Kanban Link -->
+
+## 🚀 Kanban Link <a name="kanban-link"></a>
+
+- [Kanban Link](https://github.com/abdallahmalima/PAKTZ_Restaurant/projects/1)
+
+<!-- Links to the pull requests -->
+
+## 🚀 Pull Requests <a name="Pull Requests"></a>
+
+- **Abdallah Antony**
+
+  - [Code review 1](https://github.com/abdallahmalima/PAKTZ_Restaurant/pull/26#pullrequestreview-1194191748)
+  - [Code review 2](https://github.com/abdallahmalima/PAKTZ_Restaurant/pull/23#pullrequestreview-1190185464)
+  - [Code review 3](https://github.com/abdallahmalima/PAKTZ_Restaurant/pull/24#pullrequestreview-1191428686)
+
+- **Mujeeb Ur Rahman**
+
+  - [Code review 1](https://github.com/abdallahmalima/PAKTZ_Restaurant/pull/25#pullrequestreview-1193319062)
+  - [Code review 2](https://github.com/abdallahmalima/PAKTZ_Restaurant/pull/22#pullrequestreview-1190167891)
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
