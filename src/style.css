@@ -4,6 +4,28 @@
   box-sizing: border-box;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -72,10 +94,6 @@ header nav .navItems {
   width: 50%;
 }
 
-header nav .hamburger {
-  display: none;
-}
-
 footer {
   display: flex;
   width: 100%;
@@ -128,11 +146,6 @@ main ul {
   row-gap: 30px;
 }
 
-ul li {
-  border-bottom: 1px solid black;
-  padding: 7px;
-}
-
 main ul li {
   width: 90%;
   display: flex;
@@ -178,7 +191,8 @@ main ul li .buttonWrapper {
   gap: 20px;
 }
 
-main ul li .buttonWrapper button {
+main ul li .buttonWrapper button,
+.add-comment {
   font-size: 1.3rem;
   letter-spacing: 0.02rem;
   padding: 8px 12px;
@@ -189,10 +203,13 @@ main ul li .buttonWrapper button {
   box-shadow: 2px 4px #000;
 }
 
-main ul li .buttonWrapper button:hover {
+main ul li .buttonWrapper button:hover,
+.add-comment:hover {
   transform: scale(0.9);
   box-shadow: none;
 }
+
+/* Popup window styling start */
 
 .mealDetailsPop {
   display: flex;
@@ -209,7 +226,7 @@ main ul li .buttonWrapper button:hover {
 
 .popup-wrapper {
   background: #fff;
-  width: 90%;
+  width: 80%;
   border-radius: 7px;
   align-self: center;
   height: 100%;
@@ -221,32 +238,59 @@ main ul li .buttonWrapper button:hover {
   overflow: auto;
 }
 
+.fa-circle-xmark {
+  font-size: 30px;
+  color: #333;
+}
+
+.fa-circle-xmark:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
 .comments-lists {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 70%;
   background: #eee;
   border: none;
-  padding: 15px;
+  padding: 10px 12px;
   font-style: italic;
+}
+
+.comments-lists li {
+  border-bottom: 2px dashed #333;
+  line-height: 20px;
+  padding: 8px 4px;
 }
 
 .meal-detail-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 17px;
-  gap: 9px;
+  font-size: 18px;
+  gap: 10px;
+  color: #333;
 }
 
 .meal-image {
-  width: 90%;
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #000;
+}
+
+.meal-title {
+  font-size: 24px;
+}
+
+.meal-ingrediant {
+  font-size: 20px;
 }
 
 .ingredient-pair {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 .CommentFormContainer {
@@ -277,12 +321,17 @@ main ul li .buttonWrapper button:hover {
 
 .ingredients {
   background: #eee;
-  padding: 10px;
+  padding: 8px 12px;
   width: 70%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   border: 3px solid #555;
-  border-radius: 5px;
+  border-radius: 8px;
+  gap: 12px;
+  line-height: 30px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 #pop-container {
@@ -301,12 +350,13 @@ main ul li .buttonWrapper button:hover {
 }
 
 .mealCommentsContainer {
-  font-size: 17px;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 100%;
   align-items: center;
+  color: #333;
 }
 
 .close-btn {
@@ -315,39 +365,7 @@ main ul li .buttonWrapper button:hover {
   width: 90%;
 }
 
-.close-btn svg {
-  width: 35px;
-  height: 35px;
-}
-
 .form-title {
-  font-size: 17px;
-}
-
-.add-comment {
-  background-color: #555;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-}
-
-@media (min-width: 768px) {
-  #pop-container {
-    display: none;
-    padding-block: 3%;
-  }
-
-  .popup-wrapper {
-    width: 50%;
-  }
-
-  .meal-image {
-    width: 50%;
-  }
-
-  .ingredient-pair {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  font-size: 18px;
+  color: #333;
 }
