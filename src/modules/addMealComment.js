@@ -1,4 +1,4 @@
-import displayMealComments from './showMealComments';
+import displayMealComments from './showMealComments.js';
 
 const BASE_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 

@@ -1,4 +1,4 @@
-import { getCommentCounts } from '../modules/showMealComments';
+import { getCommentCounts } from '../modules/showMealComments.js';
 
 describe('counts number of comments', () => {
   it('check length of the array of three comments', () => {

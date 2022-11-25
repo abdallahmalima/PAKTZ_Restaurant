@@ -25,7 +25,7 @@ const updateMealCommentsUI = (comments) => {
   updateCommentCountsUI(commentLength);
 
   const commentList = document.querySelector('.comments-lists');
-  const lists = comments.map(({ username, comment }) => `<li><b>${username}</b>:${comment} </li>`).join('');
+  const lists = comments.map(({ username, comment }) => `<li><b>${username}</b>: ${comment} </li>`).join('');
   commentList.innerHTML = lists;
 };
 
