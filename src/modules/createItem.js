@@ -14,10 +14,6 @@ const createItem = (obj, list, item) => {
   comments.className = 'comments';
   comments.id = obj.idMeal;
   comments.innerHTML = 'Comments';
-  const reservation = document.createElement('button');
-  reservation.type = 'button';
-  reservation.className = 'reservation';
-  reservation.innerHTML = 'Reservation';
   const buttonWrapper = document.createElement('div');
   buttonWrapper.className = 'buttonWrapper';
   const nameWrapper = document.createElement('div');
@@ -30,7 +26,6 @@ const createItem = (obj, list, item) => {
   li.appendChild(nameWrapper);
   li.appendChild(likesCounter);
   buttonWrapper.appendChild(comments);
-  buttonWrapper.appendChild(reservation);
   li.appendChild(buttonWrapper);
   list.appendChild(li);
 
