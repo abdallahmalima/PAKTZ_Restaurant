@@ -1,4 +1,7 @@
-const BASE_URL = 'https://www.themealdb.com/api/json/v1/1';
+import displayMealComments from "./showMealComments";
+import addEventListerForCommentForm from "./addMealComment";
+
+const BASE_URL = `https://www.themealdb.com/api/json/v1/${process.env.MEAL_API_KEY}`;
 
 const getMealsDetails = async (idMeal) => {
   const response = await fetch(`${BASE_URL}/lookup.php?i=${idMeal}`);
@@ -7,7 +10,7 @@ const getMealsDetails = async (idMeal) => {
 };
 
 const updateMealDetailsUI = ({ meals }) => {
-  const mealDetailContainer = document.querySelector('.meal-detail-containerr');
+  const mealDetailContainer = document.querySelector('.meal-detail-container');
   const [{
     idMeal,
     strMeal,
@@ -20,7 +23,7 @@ const updateMealDetailsUI = ({ meals }) => {
 
   const mealDetails = `
 <img class="meal-image" src="${strMealThumb}" alt="">
-    <h3 class="meal-title">Meal Name: ${strMeal}</h3>
+    <h3 class="meal-title">${strMeal}</h3>
     <h4 class="meal-title">Ingredients</h4>
     <div class='ingredients'>
     <div class="ingredient-pair">
@@ -47,6 +50,9 @@ const handleCommentBtnClick = (e) => {
   const mealDetailsPopup = document.querySelector('#pop-container');
   mealDetailsPopup.style.display = 'flex';
   displayMealsDetails(idMeal);
+  displayMealComments(idMeal);
+  addEventListerForCommentForm();
+  popUploseBtnEventlistener();
 };
 
 const addEventListerForCommentBtn = (commentBtn) => {
@@ -56,6 +62,13 @@ const addEventListerForCommentBtn = (commentBtn) => {
 const registerCommentBtnEventListener = () => {
   const commentBtns = document.querySelectorAll('.comments');
   commentBtns.forEach(addEventListerForCommentBtn);
+};
+
+const popUploseBtnEventlistener=()=>{
+const closeBtn=document.querySelector('.close-btn-icon');
+closeBtn.addEventListener('click',()=>{
+  document.querySelector('#pop-container').style.display='none';
+});
 };
 
 export default registerCommentBtnEventListener;
