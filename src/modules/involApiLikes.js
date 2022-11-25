@@ -1,6 +1,6 @@
 // involment api
 const invoApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-const apiKey = 'pspditgyrkSk8eHgvo9u'; // 'uwElOeupds7Rg4hQTUTe';
+const apiKey = `${process.env.INVOLVEMENT_API_KEY}`;
 const invoURL = `${invoApiUrl}${apiKey}/likes`;
 
 const addLikes = async (itemId) => {
