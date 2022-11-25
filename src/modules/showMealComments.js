@@ -2,38 +2,31 @@ const BASE_URL = `https://us-central1-involvement-api.cloudfunctions.net/capston
 
 const getMealComments = async (idMeal) => {
   const response = await fetch(`${BASE_URL}${idMeal}`);
-  if(response.status>=400) return [];
+  if (response.status >= 400) return [];
   const meals = await response.json();
   return meals;
 };
 
-const getCommentCounts=(comments)=>{
-return comments.length;
-};
+const getCommentCounts = (comments) => comments.length;
 
-let updateCommentCountsUI=(commentLength)=>{
-  let commentCountsText=`Comment(0)`;
-  if(commentLength==1){
-   commentCountsText=`Comment(${commentLength})`;
-  }else if(commentLength>1){
-   commentCountsText=`Comments(${commentLength})`;
+const updateCommentCountsUI = (commentLength) => {
+  let commentCountsText = 'Comment(0)';
+  if (commentLength === 1) {
+    commentCountsText = `Comment(${commentLength})`;
+  } else if (commentLength > 1) {
+    commentCountsText = `Comments(${commentLength})`;
   }
   const commentCounts = document.querySelector('.comment_counts');
-  commentCounts.innerText=commentCountsText;
- 
-}
+  commentCounts.innerText = commentCountsText;
+};
 
 const updateMealCommentsUI = (comments) => {
- 
-const commentLength=getCommentCounts(comments)
-updateCommentCountsUI(commentLength);
+  const commentLength = getCommentCounts(comments);
+  updateCommentCountsUI(commentLength);
 
   const commentList = document.querySelector('.comments-lists');
-  const lists =  comments.map(({ username,  comment }) => 
-  `<li><b>${username}</b>:${comment} </li>`
-  ).join('');
+  const lists = comments.map(({ username, comment }) => `<li><b>${username}</b>:${comment} </li>`).join('');
   commentList.innerHTML = lists;
-  
 };
 
 const displayMealComments = async (idMeal) => {
@@ -41,4 +34,4 @@ const displayMealComments = async (idMeal) => {
 };
 
 export default displayMealComments;
-export {getCommentCounts};
+export { getCommentCounts };

@@ -1,5 +1,5 @@
-import displayMealComments from "./showMealComments";
-import addEventListerForCommentForm from "./addMealComment";
+import displayMealComments from './showMealComments';
+import addEventListerForCommentForm from './addMealComment';
 
 const BASE_URL = `https://www.themealdb.com/api/json/v1/${process.env.MEAL_API_KEY}`;
 
@@ -45,6 +45,13 @@ const displayMealsDetails = async (idMeal) => {
   getMealsDetails(idMeal).then(updateMealDetailsUI);
 };
 
+const popUploseBtnEventlistener = () => {
+  const closeBtn = document.querySelector('.close-btn-icon');
+  closeBtn.addEventListener('click', () => {
+    document.querySelector('#pop-container').style.display = 'none';
+  });
+};
+
 const handleCommentBtnClick = (e) => {
   const idMeal = e.target.id;
   const mealDetailsPopup = document.querySelector('#pop-container');
@@ -62,13 +69,6 @@ const addEventListerForCommentBtn = (commentBtn) => {
 const registerCommentBtnEventListener = () => {
   const commentBtns = document.querySelectorAll('.comments');
   commentBtns.forEach(addEventListerForCommentBtn);
-};
-
-const popUploseBtnEventlistener=()=>{
-const closeBtn=document.querySelector('.close-btn-icon');
-closeBtn.addEventListener('click',()=>{
-  document.querySelector('#pop-container').style.display='none';
-});
 };
 
 export default registerCommentBtnEventListener;
