@@ -1,5 +1,5 @@
-import displayMealComments from './showMealComments';
-import addEventListerForCommentForm from './addMealComment';
+import displayMealComments from './showMealComments.js';
+import addEventListerForCommentForm from './addMealComment.js';
 
 const BASE_URL = `https://www.themealdb.com/api/json/v1/${process.env.MEAL_API_KEY}`;
 
@@ -24,15 +24,15 @@ const updateMealDetailsUI = ({ meals }) => {
   const mealDetails = `
 <img class="meal-image" src="${strMealThumb}" alt="">
     <h3 class="meal-title">${strMeal}</h3>
-    <h4 class="meal-title">Ingredients</h4>
+    <h4 class="meal-ingrediant">Ingredients</h4>
     <div class='ingredients'>
     <div class="ingredient-pair">
-    <p>${strIngredient1}</p>
-    <p>${strIngredient2}</p>
+    <p>${strIngredient1.toUpperCase()}</p>
+    <p>${strIngredient2.toUpperCase()}</p>
     </div>
     <div class="ingredient-pair">
-      <p>${strIngredient3}</p>
-      <p>${strIngredient4}</p>
+      <p>${strIngredient3.toUpperCase()}</p>
+      <p>${strIngredient4.toUpperCase()}</p>
       </div>
       </div>
       <input type="hidden"class='item_id' name="item_id" value="${idMeal}">
@@ -46,7 +46,7 @@ const displayMealsDetails = async (idMeal) => {
 };
 
 const popUploseBtnEventlistener = () => {
-  const closeBtn = document.querySelector('.close-btn-icon');
+  const closeBtn = document.querySelector('.fa-circle-xmark');
   closeBtn.addEventListener('click', () => {
     document.querySelector('#pop-container').style.display = 'none';
   });
