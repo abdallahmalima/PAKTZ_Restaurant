@@ -46,7 +46,7 @@ a {
   letter-spacing: 0.05rem;
 }
 
-a:hover {
+nav ul a:hover {
   background-color: #555;
   color: #fff;
   padding: 4px 8px;
@@ -80,6 +80,8 @@ ul {
 
 main ul li img {
   max-width: 100%;
+  box-shadow: #000 0 4px 40px;
+  border-radius: 10px;
 }
 
 header nav .logo-wrapper img {
@@ -173,7 +175,7 @@ main ul li .nameWrapper i {
 }
 
 main ul li .nameWrapper i:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
   color: red;
 }
 

@@ -1,4 +1,6 @@
-const createItem = (obj, list) => {
+import { addLikes, updatesLikes } from './involApiLikes.js';
+
+const createItem = (obj, list, item) => {
   const li = document.createElement('li');
   const image = document.createElement('IMG');
   image.setAttribute('src', obj.strMealThumb);
@@ -6,6 +8,7 @@ const createItem = (obj, list) => {
   name.innerHTML = obj.strMeal;
   const like = document.createElement('i');
   like.className = 'fa-solid fa-heart';
+  like.id = obj.idMeal;
   const comments = document.createElement('button');
   comments.type = 'button';
   comments.className = 'comments';
@@ -20,7 +23,7 @@ const createItem = (obj, list) => {
   const nameWrapper = document.createElement('div');
   nameWrapper.className = 'nameWrapper';
   const likesCounter = document.createElement('h4');
-  likesCounter.innerHTML = '5 likes';
+  likesCounter.innerHTML = `${item} likes`;
   li.appendChild(image);
   nameWrapper.appendChild(name);
   nameWrapper.appendChild(like);
@@ -30,6 +33,12 @@ const createItem = (obj, list) => {
   buttonWrapper.appendChild(reservation);
   li.appendChild(buttonWrapper);
   list.appendChild(li);
+
+  like.addEventListener('click', (e) => {
+    addLikes({ item_id: obj.idMeal });
+    const item = e.target.id;
+    updatesLikes(item, likesCounter);
+  });
 };
 
 export default createItem;
