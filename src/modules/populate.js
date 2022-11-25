@@ -1,5 +1,6 @@
 import createItem from './createItem.js';
 import countItem from './countItem.js';
+import registerCommentBtnEventListener from './showMealDetails.js';
 
 const mealList = document.querySelector('main');
 
@@ -14,6 +15,7 @@ const poplauteItem = (meals, likes) => {
   const product = document.querySelector('.item2 a');
   product.innerHTML = '';
   product.innerHTML = `Product (${countItem(list)})`;
+  registerCommentBtnEventListener();
 };
 
 export default poplauteItem;
